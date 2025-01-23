@@ -1,0 +1,377 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #011936;
+  color: #C0DFA1;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background-color: #6A7A8C;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  }
+
+
+nav ul li {
+  color: #9fc490;
+}
+
+nav ul li a {
+  color: #C0DFA1;
+  text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li:hover {
+  color: #9fc490;
+}
+
+.enroll {
+  background-color: #82a3a1;
+  color: #465362;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: -10px; /* Slightly adjust position */
+}
+
+.enroll:hover {
+  background-color: #C0DFA1;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto; 
+}
+
+.gallery {
+  overflow-x: scroll;
+  height: fit-content;
+  display: flex;
+  float: left;
+  align-items: center;
+  justify-items: center;
+  background-color: #465362;
+  padding: 20px;
+  padding-bottom: 20px;
+  border-width: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.gallery img{
+  width: 500px;
+  height: 200px;
+  margin-right: 5px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery img:hover{
+  width: 500px;
+  height: 200px;
+  transform: scale(1.2,1.2);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px #C0DFA1;
+}
+
+
+.prev, .next {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background-color: #465362;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  color: #011936;
+}
+
+.news, .events {
+  padding: 20px;
+  background-color: #C0DFA1;
+  border-radius: 8px;
+  text-align: center;
+}
+.news {
+  padding: 40px; 
+  background-color: #82a3a1;
+  color: #011936;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  line-height: 3; 
+  font-size: 16px; 
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  width: 90%;
+  margin: auto;
+  background-color: blue;
+  border-color: green;
+  border-width: 20px;
+  height: fit-content;
+}
+
+.parent div {
+  padding: 20px;
+  background-color: #F5F5DC;
+  border: none;
+  text-align: center;
+  fill: #333333;
+  align-content: center;
+  height: fit-content;
+}
+  
+.div1 {
+  grid-column: span 4 / span 4;
+  margin-top: 30px;
+  margin: 40px;
+}
+
+.div2 {
+  grid-column: span 2 / span 2;
+  grid-row-start: 2;
+  margin: 40px;
+}
+
+.div3 {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  margin: 40px;
+}
+
+.div4 {
+  grid-column: span 2 / span 2;
+  grid-row-start: 3;
+  margin: 40px;
+}
+
+.div5 {
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 3;
+  margin: 40px;
+}
+
+.roster div {
+  padding: 20px;
+  background-color: #F5F5DC;
+  border: none;
+  text-align: center;
+}
+.contacts {
+  padding: 20px;
+  background-color: black;
+  border: none;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.title {
+  text-align: center;
+  background-color: #F5F5DC;
+  border-radius: 8px;
+  border: 5px;
+  width: fit-content;
+  font-size: larger;
+  font-weight: bold;
+  padding: 10px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.events {
+  padding: 20px;
+  color: #333333;
+  background-color: #82a3a1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+
+/* Calendar Container */
+.calendar-container {
+  text-align: center;
+  background: #333333; /* Darker background for contrast */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  position: relative; /* Enables absolute positioning for arrows */
+}
+
+/* Calendar Title Styling */
+#calendar-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #9fc490;
+  display: inline-block; /* Ensures alignment with arrows */
+}
+
+/* Navigation Arrows */
+.calendar-nav {
+  background: none;
+  border: none;
+  color: #9fc490;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Aligns vertically with the title */
+  transform: translateY(-50%);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Specific Positioning for Arrows */
+.prev-button {
+  left: 10px; /* Aligns the left arrow */
+}
+
+.next-button {
+  right: 10px; /* Aligns the right arrow */
+}
+
+/* Hover Effects for Arrows */
+.calendar-nav:hover {
+  color: #b9fbc0;
+  transform: scale(1.2); /* Slight scaling for interactivity */
+}
+
+/* Calendar Grid */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Individual Day Styling */
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 14px;
+  color: #333;
+  background-color: #e6ffe6;
+  border-radius: 50%;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.day:hover {
+  background-color: #b9fbc0;
+}
+
+.current-day {
+  background-color: #c0d9af;
+  color: black;
+  font-weight: bold;
+}
+
+.day.blank {
+  visibility: hidden;
+  background-color: transparent;
+}
+
+/* Event Day Dot */
+.event-day::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+
+
+.dropdown-menu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #465362;
+  display: none; 
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #666;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; 
+}
